@@ -214,8 +214,8 @@
   align-items: center;
   justify-content: center;
 }
-.nav-list {
-}
+/* .nav-list {
+} */
 .nav-subnav {
   display: none;
   position: absolute;
@@ -295,8 +295,8 @@
 /* header nav end */
 
 /* slider */
-.slider {
-}
+/* .slider {
+} */
 .slider a {
   display: block;
 }
@@ -312,13 +312,29 @@
 .banner {
   width: 100%;
   display: flex;
-  margin-top: 1px;
+  flex-wrap: wrap;
+  align-items: center;
   justify-content: space-evenly;
+  margin: auto;
 }
-.banner-item-img {
+
+.banner-item {
   width: 33.1%;
-  height: 370px;
-  background-color: blue;
+  height: auto;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.banner-item:hover img {
+  transform: scale(1.2);
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: 6s;
 }
 
 /* banner-end */
