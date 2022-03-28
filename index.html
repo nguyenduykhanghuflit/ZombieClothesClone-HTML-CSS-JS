@@ -20,6 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
     <!-- Reset CSS -->
     <link
@@ -37,6 +38,9 @@
     <!-- Style -->
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+
   </head>
   <body>
     <div id="app">
@@ -62,12 +66,15 @@
                     ><i class="bx bxl-instagram"></i
                   ></a>
                 </li>
+
+                <!-- search -->
                 <li class="header-top-action-item item-icon-search">
                   <a href="" class="header-top-link"
                     ><i class="bx bx-search"></i
                   ></a>
+
                   <!-- Search box -->
-                  <div class="header-top-search-box">
+                  <div class="header-top-search-box header-top-modal">
                     <span class="box-triangle">
                       <svg viewBox="0 0 20 9" role="presentation">
                         <path
@@ -77,7 +84,7 @@
                       </svg>
                     </span>
                     <p class="heading">tìm kiếm</p>
-                    <div class="search-box">
+                    <div class="header-box search-box">
                       <input type="text" placeholder="Tìm kiếm sản phẩm..." />
                       <button type="button" class="btn-search">
                         <i class="bx bx-search"></i>
@@ -165,37 +172,46 @@
                       <a href="" class="see-more">Xem thêm 40 sản phẩm</a>
                     </div>
                     <!-- search results -->
-
-                    <!-- Search box -->
                   </div>
+                     <!-- Search box -->
+
                 </li>
+                 <!-- search -->
+
+                  <!-- Login -->
                 <li class="header-top-action-item item-icon-user">
                   <a href="" class="header-top-link"
                     ><i class="bx bxs-user-circle"></i
                   ></a>
-                </li>
+                    
+                        
+                 </li>
+                 <!-- Login -->
+
+                 <!-- giỏ hàng -->
                 <li class="header-top-action-item item-icon-cart">
                   <a href="" class="header-top-link"
                     ><i class="bx bx-cart"></i
                   ></a>
                 </li>
+                 <!-- giỏ hàng -->
               </ul>
             </div>
           </div>
-          <nav class="header-nav">
+          <nav class="header-nav">  
             <ul class="nav-list">
               <li class="nav-list-item">
-                <a href="" class="nav-list-link">Trang chủ</a>
+                <a href="/" class="nav-list-link">Trang chủ</a>
               </li>
               <li class="nav-list-item">
-                <a href="" class="nav-list-link">Sản phẩm</a>
+                <a href="/product.html" class="nav-list-link">Sản phẩm</a>
                 <i class="nav-icon-dropdown bx bx-chevron-down"></i>
 
                 <!-- Submenu -->
 
                 <ul class="nav-subnav">
                   <li class="subnav-item">
-                    <a href="" class="nav-list-link nav-list-sublink"
+                    <a href="/product.html" class="nav-list-link nav-list-sublink"
                       >TẤT CẢ SẢN PHẨM︱ALL
                     </a>
                   </li>
@@ -293,7 +309,8 @@
             </ul>
           </nav>
         </div>
-      </header>
+      </header> 
+      <!-- ----------Header---------- -->
 
       <!-- ----------Slider---------- -->
       <div class="slider">
@@ -304,28 +321,32 @@
           />
         </a>
       </div>
+      <!-- ----------Slider---------- -->
+
       <!-- ----------Banner---------- -->
       <div class="banner">
         <div class="banner-item">
           <img
-            src="https://file.hstatic.net/200000321771/file/3_bdadae0d79ee4f4fa46338613e9a5b57.jpg"
+            src="./assets/images/b1t.webp"
             alt=""
           />
         </div>
         <div class="banner-item"">
           <img
-            src="https://file.hstatic.net/200000321771/file/2_e06d86f187de4e2f90c44e764fc47fe9.jpg"
+            src="./assets/images/b2t.webp"
             alt=""
           />
         </div>
         <div class="banner-item"">
           <img
-            src="https://file.hstatic.net/200000321771/file/1_3381a57c5ef44c3b9c71762f40e9cd70.jpg"
+            src="./assets/images/b3t.webp"
             alt=""
           />
         </div>
       </div>
+      <!-- ----------Banner---------- -->
 
+      <!-- Product -->
       <div class="products">
         <div class="product-heading">SẢN PHẨM MỚI - NEW PRODUCTS</div>
         <div class="grid">
@@ -360,8 +381,8 @@
             </div>
             <div class="grid__col-3">
               <div class="product">
-                <img src="//product.hstatic.net/200000321771/product/2p6a5735_a04687a3dcf94adb88dbe6441f5b922b_medium.jpg" alt="" class="product-img product-show">
-                <img src="//product.hstatic.net/200000321771/product/2p6a5737_b3213b065504466c8d9aa9da19795954_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="https://product.hstatic.net/200000321771/product/2p6a5735_a04687a3dcf94adb88dbe6441f5b922b_medium.jpg" alt="" class="product-img product-show">
+                <img src="https://product.hstatic.net/200000321771/product/2p6a5737_b3213b065504466c8d9aa9da19795954_grande.jpg" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -374,8 +395,8 @@
             </div>
             <div class="grid__col-3">
               <div class="product">
-                <img src="//product.hstatic.net/200000321771/product/271739691_894884961076838_8135394162538589269_n_e814b41a580a4cb6b3d8e1963e0ef8db_medium.jpg" alt="" class="product-img product-show">
-                <img src="//product.hstatic.net/200000321771/product/271541735_634953457746867_7566922806359762025_n_bbabb788919c43d193a79576e58f739d_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="https://product.hstatic.net/200000321771/product/271739691_894884961076838_8135394162538589269_n_e814b41a580a4cb6b3d8e1963e0ef8db_medium.jpg" alt="" class="product-img product-show">
+                <img src="https://product.hstatic.net/200000321771/product/271541735_634953457746867_7566922806359762025_n_bbabb788919c43d193a79576e58f739d_grande.jpg" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -390,8 +411,8 @@
           <div class="grid__row">
             <div class="grid__col-3">
               <div class="product">
-                <img src="//product.hstatic.net/200000321771/product/2p6a5735_a04687a3dcf94adb88dbe6441f5b922b_medium.jpg" alt="" class="product-img product-show">
-                <img src="//product.hstatic.net/200000321771/product/2p6a5737_b3213b065504466c8d9aa9da19795954_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="https://product.hstatic.net/200000321771/product/2p6a5735_a04687a3dcf94adb88dbe6441f5b922b_medium.jpg" alt="" class="product-img product-show">
+                <img src="https://product.hstatic.net/200000321771/product/2p6a5737_b3213b065504466c8d9aa9da19795954_grande.jpg" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -404,8 +425,8 @@
             </div>
             <div class="grid__col-3">
               <div class="product">
-                <img src="//product.hstatic.net/200000321771/product/271739691_894884961076838_8135394162538589269_n_e814b41a580a4cb6b3d8e1963e0ef8db_medium.jpg" alt="" class="product-img product-show">
-                <img src="//product.hstatic.net/200000321771/product/271541735_634953457746867_7566922806359762025_n_bbabb788919c43d193a79576e58f739d_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="https://product.hstatic.net/200000321771/product/271739691_894884961076838_8135394162538589269_n_e814b41a580a4cb6b3d8e1963e0ef8db_medium.jpg" alt="" class="product-img product-show">
+                <img src="https://product.hstatic.net/200000321771/product/271541735_634953457746867_7566922806359762025_n_bbabb788919c43d193a79576e58f739d_grande.jpg" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -451,35 +472,40 @@
           
         </div>
       </div>
+       <!-- Product -->
+
+       <!-- ----------Banner---------- -->
       <div style="margin-top:30px" class="banner">
         <div class="banner-item">
           <img
-            src="https://file.hstatic.net/200000321771/file/3_bdadae0d79ee4f4fa46338613e9a5b57.jpg"
+            src="./assets/images/b1b.webp"
             alt=""
           />
         </div>
         <div class="banner-item"">
           <img
-            src="https://file.hstatic.net/200000321771/file/2_e06d86f187de4e2f90c44e764fc47fe9.jpg"
+            src="./assets/images/b2b.webp"
             alt=""
           />
         </div>
         <div class="banner-item"">
           <img
-            src="https://file.hstatic.net/200000321771/file/1_3381a57c5ef44c3b9c71762f40e9cd70.jpg"
+            src="./assets/images/b3b.webp"
             alt=""
           />
         </div>
       </div>
+       <!-- ----------Banner---------- -->
 
+      <!-- Product -->
       <div class="products">
         <div class="product-heading">JEANS COLLECTION 2022</div>
         <div class="grid">
           <div class="grid__row">
             <div class="grid__col-3">
               <div class="product">
-                <img src="https://product.hstatic.net/200000321771/product/2p6a9859_0b69d118a40b4207bfa4e22bc19454c6_master.jpg" alt="" class="product-img product-show">
-                <img src="https://product.hstatic.net/200000321771/product/2p6a9860_c9fa74ab45404986abcb4b7942ebf7bf_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="./assets/images/jean1.webp" alt="" class="product-img product-show">
+                <img src="./assets/images/jean1hv.webp" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -492,8 +518,8 @@
             </div>
             <div class="grid__col-3">
               <div class="product">
-                <img src="https://product.hstatic.net/200000321771/product/271456888_233558595622847_148706376794218123_n_2a0da6a29d844c469d1f96a0c83a8f5b_master.jpg" alt="" class="product-img product-show">
-                <img src="https://product.hstatic.net/200000321771/product/269670583_714518126161762_1892768403296979016_n_82173cd522a24355a3f483c3c06c0ce7_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="./assets/images/j2.webp" alt="" class="product-img product-show">
+                <img src="./assets/images/j2hv.webp" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -506,8 +532,8 @@
             </div>
             <div class="grid__col-3">
               <div class="product">
-                <img src="//product.hstatic.net/200000321771/product/2p6a5735_a04687a3dcf94adb88dbe6441f5b922b_medium.jpg" alt="" class="product-img product-show">
-                <img src="//product.hstatic.net/200000321771/product/2p6a5737_b3213b065504466c8d9aa9da19795954_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="./assets/images/j3.webp" alt="" class="product-img product-show">
+                <img src="./assets/images/j3hv.webp" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -520,8 +546,8 @@
             </div>
             <div class="grid__col-3">
               <div class="product">
-                <img src="//product.hstatic.net/200000321771/product/271739691_894884961076838_8135394162538589269_n_e814b41a580a4cb6b3d8e1963e0ef8db_medium.jpg" alt="" class="product-img product-show">
-                <img src="//product.hstatic.net/200000321771/product/271541735_634953457746867_7566922806359762025_n_bbabb788919c43d193a79576e58f739d_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="./assets/images/j4.webp" alt="" class="product-img product-show">
+                <img src="./assets/images/j4hv.webp" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -536,8 +562,8 @@
           <div class="grid__row">
             <div class="grid__col-3">
               <div class="product">
-                <img src="//product.hstatic.net/200000321771/product/2p6a5735_a04687a3dcf94adb88dbe6441f5b922b_medium.jpg" alt="" class="product-img product-show">
-                <img src="//product.hstatic.net/200000321771/product/2p6a5737_b3213b065504466c8d9aa9da19795954_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="./assets/images/j5.webp" alt="" class="product-img product-show">
+                <img src="./assets/images/j5hv.webp" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -550,23 +576,8 @@
             </div>
             <div class="grid__col-3">
               <div class="product">
-                <img src="//product.hstatic.net/200000321771/product/271739691_894884961076838_8135394162538589269_n_e814b41a580a4cb6b3d8e1963e0ef8db_medium.jpg" alt="" class="product-img product-show">
-                <img src="//product.hstatic.net/200000321771/product/271541735_634953457746867_7566922806359762025_n_bbabb788919c43d193a79576e58f739d_grande.jpg" alt="" class="product-img product-img-hover">
-              </div>
-              <div class="product-info">
-                <div class="product-title">
-                  HOMO Tee In White  HOMO Tee In White  HOMO Tee In White  HOMO Tee In White  
-                </div>
-                <div class="product-price">
-                  380,000₫
-                </div>
-              </div>
-            </div>
-            
-            <div class="grid__col-3">
-              <div class="product">
-                <img src="https://product.hstatic.net/200000321771/product/271456888_233558595622847_148706376794218123_n_2a0da6a29d844c469d1f96a0c83a8f5b_master.jpg" alt="" class="product-img product-show">
-                <img src="https://product.hstatic.net/200000321771/product/269670583_714518126161762_1892768403296979016_n_82173cd522a24355a3f483c3c06c0ce7_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="./assets/images/j6.webp" alt="" class="product-img product-show">
+                <img src="./assets/images/j6hv.webp" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -580,8 +591,23 @@
             
             <div class="grid__col-3">
               <div class="product">
-                <img src="https://product.hstatic.net/200000321771/product/2p6a9859_0b69d118a40b4207bfa4e22bc19454c6_master.jpg" alt="" class="product-img product-show">
-                <img src="https://product.hstatic.net/200000321771/product/2p6a9860_c9fa74ab45404986abcb4b7942ebf7bf_grande.jpg" alt="" class="product-img product-img-hover">
+                <img src="./assets/images/j7.jpg" alt="" class="product-img product-show">
+                <img src="./assets/images/j7hv.jpg" alt="" class="product-img product-img-hover">
+              </div>
+              <div class="product-info">
+                <div class="product-title">
+                  HOMO Tee In White  HOMO Tee In White  HOMO Tee In White  HOMO Tee In White  
+                </div>
+                <div class="product-price">
+                  380,000₫
+                </div>
+              </div>
+            </div>
+            
+            <div class="grid__col-3">
+              <div class="product">
+                <img src="./assets/images/j8.webp" alt="" class="product-img product-show">
+                <img src="./assets/images/j8hv.jpg" alt="" class="product-img product-img-hover">
               </div>
               <div class="product-info">
                 <div class="product-title">
@@ -597,8 +623,25 @@
           
         </div>
       </div>
+       <!-- Product -->
     
-      <footer class="footer"></footer>
+      <footer class="footer">
+        <div class="footer-top">
+          <div class="grid">
+              <div class="footer-news"><i class='footer-top-icon bx bx-mail-send'></i>Đăng kí nhận tin</div>
+          
+          <div class="footer-form-news">
+            <input type="text" placeholder="Nhập email của bạn" class="send-mail">
+            <button type="submit" class="btn-sendmail">Đăng ký</button>
+          </div>
+          <div class="footer-contact">
+            <i class='footer-top-icon bx bxs-phone'></i>  Hỗ trợ / Mua hàng 0924989342
+          </div>
+        </div>
+       </div>
+        <div class="footer-mid"></div>
+        <div class="footer-bot"></div>
+      </footer>
     </div>
 
     <!-- Modal -->

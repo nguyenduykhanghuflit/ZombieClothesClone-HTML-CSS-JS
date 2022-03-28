@@ -1,0 +1,21 @@
+.container {
+  margin-top: 140px;
+}
+.product-heading {
+  text-align: left;
+  padding-left: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.product-heading:hover {
+  color: unset;
+}
+
+.nav-list .nav-list-main > .nav-list-link::after {
+  content: '';
+  display: block;
+  width: 120%;
+  height: 2px;
+  background: #5c5c5c;
+  transition: width 0.3s;
+}
