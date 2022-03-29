@@ -130,7 +130,7 @@ html {
   margin-top: calc(140px + 5px);
   height: 30px;
   background-color: #f5f5f5;
-  padding-left: 50px;
+  /* padding-left: 50px; */
 }
 .breadcrumb a {
   display: inline-block;
@@ -140,4 +140,7 @@ html {
 }
 .breadcrumb .br-main {
   color: #777777;
+}
+.breadcrumb .grid {
+  padding-left: 20px;
 }
