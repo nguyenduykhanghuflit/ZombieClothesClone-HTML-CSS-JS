@@ -144,3 +144,14 @@ html {
 .breadcrumb .grid {
   padding-left: 20px;
 }
+
+.button-hover {
+  background: linear-gradient(to right, white 50%, #fc700b 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all 0.5s ease-out;
+}
+.button-hover:hover {
+  background-position: left bottom;
+  color: black;
+}

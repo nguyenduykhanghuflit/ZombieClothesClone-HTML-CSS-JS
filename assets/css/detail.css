@@ -125,7 +125,6 @@
   right: 0;
 }
 .detail-button-add-cart {
-  background-color: #fc700b;
   height: 50px;
   border-radius: 1px;
   line-height: 50px;
@@ -139,11 +138,6 @@
   text-align: center;
   text-transform: uppercase;
   border: 1px solid #fc700b;
-  transition: all 0.4s ease-in-out;
-}
-.detail-button-add-cart:hover {
-  color: black;
-  background-color: white;
 }
 
 .des-heading {
