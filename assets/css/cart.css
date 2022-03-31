@@ -1,6 +1,6 @@
 .cart {
-  width: 90%;
   margin: 0 auto;
+  padding: 0 20px;
 }
 .cart-heading {
   height: 150px;
@@ -29,11 +29,101 @@
 .cart-heading > h3 > .count-cart {
   font-weight: 500;
 }
-.grid {
-}
+
 .product-cart {
+  display: flex;
+  justify-content: space-between;
 }
 .cart-list-product {
+  width: 65%;
+  height: 450px;
+  overflow-y: scroll;
 }
+.cart-list-product::-webkit-scrollbar {
+  width: 0px;
+}
+.cart-product-item {
+  width: 100%;
+  margin: 10px auto;
+  padding: 5px 2px;
+  height: 140px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px #dadbdd solid;
+  align-items: center;
+}
+.item-img {
+  width: 100px;
+  height: 100px;
+}
+.item-info {
+  width: calc(100% - 100px - 10px);
+  height: 100%;
+  padding: 20px 5px;
+}
+.item-info > div + div {
+  margin: 12px 0;
+}
+.info-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.7rem;
+  color: #050505;
+  font-weight: 700;
+}
+
+.info-price {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #050505;
+}
+
+.info-total {
+  display: flex;
+  justify-content: space-between;
+}
+.total-amount {
+  width: 100px;
+  height: 30px;
+  border: #dadbdd 1px solid;
+  display: flex;
+  align-items: center;
+}
+.total-amount .input-amout {
+  width: calc(100% - 50px);
+  height: 29px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  background-color: #ededed;
+  text-align: center;
+  font-weight: bold;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  appearance: none;
+}
+.button-amount {
+  width: 25px;
+  height: 29px;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  text-align: center;
+  background-color: white;
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.total-money {
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+
 .cart-info-product {
+  width: 360px;
+  height: 330px;
+  background-color: blue;
 }
