@@ -54,13 +54,15 @@
 .header-top-link:hover {
   color: #f3ab70;
   transition: all 0.2s ease-in-out;
+  cursor: pointer;
 }
 
+/* modal */
 .header-top-modal {
   z-index: 999;
   display: none;
   right: calc(100% - 50px);
-  top: calc(100% - 15px);
+  top: calc(100% - 5px);
   position: absolute;
   width: 400px;
   outline: none;
@@ -92,11 +94,14 @@
 .header-top-modal .box-triangle svg {
   filter: drop-shadow(0 -3px 2px rgba(0, 0, 0, 0.12));
 }
+/* modal */
 
-.header-top-action-item:hover .header-top-modal-show {
+/* ẩn hiển modal */
+.header-top-action-item .header-top-modal-show {
   display: block;
 }
 
+/* modal search */
 .heading {
   position: relative;
   font-family: Quicksand;
@@ -221,10 +226,11 @@ header-top-search-box .heading::after {
   text-align: center;
   line-height: 50px;
 }
+/* modal search */
 
+/* modal login */
 .item-icon-user .header-top-modal {
   width: 350px;
-  /* display: block; */
 }
 .header-top-modal .heading-login-with {
   font-size: 1.2rem;
@@ -302,9 +308,7 @@ header-top-search-box .heading::after {
 }
 
 /* Cart CSS */
-.header-top-cart-box {
-  /* display: block; */
-}
+
 .item-icon-cart .box-heading {
   position: sticky;
   line-height: initial;
@@ -437,8 +441,7 @@ header-top-search-box .heading::after {
   font-size: 1.5rem;
   font-weight: 500;
 }
-.payment-text {
-}
+
 .payment-total {
   text-align: right;
   color: #ff0000;
@@ -460,18 +463,7 @@ header-top-search-box .heading::after {
   display: block;
 }
 
-.box-view-cart {
-}
-.box-make-payment {
-}
-.box-payment-button.box-view-cart {
-}
-.box-payment-button.box-make-payment {
-}
-
 /* Cart CSS */
-
-/* header top end */
 
 /* header nav start */
 .header-nav {

@@ -1,55 +1,54 @@
-// let formLogin = document.querySelector('.header-top-login-box');
-// let fromResetPassword = document.querySelector('.reset-password-box');
+//ẩn hiện modal
+const listActions = document.querySelectorAll('.header-top-link');
+const modals = document.querySelectorAll('.header-top-modal');
 
-// let btnResetPassword = document.getElementById('modal-reset-password');
-// let btnBackLogin = document.getElementById('modal-back-login');
+const removeAllClassShowModal = (modals) => {
+  modals.forEach((item) => {
+    if (item.classList.contains('header-top-modal-show'))
+      item.classList.remove('header-top-modal-show');
+  });
+};
 
-// let headerModal = document.querySelectorAll('.header-top-modal');
-// let a = document.getElementById('app');
-// btnResetPassword.addEventListener('click', (e) => {
-//   formLogin.style.display = 'none';
-//   fromResetPassword.style.display = 'block';
-// });
-
-// btnBackLogin.addEventListener('click', (e) => {
-//   formLogin.style.display = 'block';
-//   fromResetPassword.style.display = 'none';
-// });
-
-let btnMinus = document.querySelectorAll('.button-minus');
-let btnAdd = document.querySelectorAll('.button-add');
-let amout = document.querySelectorAll('.input-amout');
-let totalMoney = document.querySelectorAll('.total-money');
-let priceProducts = document.querySelectorAll('.info-price');
-
-// const TotalMoney = () => {
-//   let total = 0;
-//   priceProducts.forEach((money) => {
-//     let price = parseInt(
-//       money.textContent.slice(0, money.textContent.length - 1)
-//     );
-//     total += price;
-//   });
-//   console.log(total);
-// };
-
-for (let i = 0; i < btnMinus.length; i++) {
-  let priceProduct = priceProducts[i].textContent;
-  let price = parseInt(priceProduct.slice(0, priceProduct.length - 1));
-  btnMinus[i].addEventListener('click', (e) => {
-    let currentVal = amout[i].value;
-    if (currentVal > 1) {
-      // TotalMoney();
-      let newVal = currentVal - 1;
-      amout[i].value = newVal;
-      totalMoney[i].innerHTML = `${newVal * price} ₫`;
+listActions.forEach((item) => {
+  item.addEventListener('click', (e) => {
+    let parent = item.parentElement;
+    let modalShow = parent.querySelector('.header-top-modal');
+    if (modalShow.classList.contains('header-top-modal-show'))
+      modalShow.classList.remove('header-top-modal-show');
+    else {
+      removeAllClassShowModal(modals);
+      modalShow.classList.add('header-top-modal-show');
     }
   });
-  btnAdd[i].addEventListener('click', (e) => {
-    // TotalMoney();
-    let currentVal = amout[i].value;
-    let newVal = parseInt(currentVal) + 1;
-    amout[i].value = newVal;
-    totalMoney[i].innerHTML = `${newVal * price} ₫`;
-  });
-}
+});
+
+const btnResetPassword = document.getElementById('modal-reset-password');
+const modalResetPassword = document.querySelector('.reset-password-box');
+const btnBackLogin = document.getElementById('modal-back-login');
+const modalLogin = document.querySelector('.header-top-login-box');
+
+//hiện form quên mật khẩu
+btnResetPassword.addEventListener('click', (e) => {
+  modalLogin.classList.remove('header-top-modal-show');
+  modalResetPassword.classList.add('header-top-modal-show');
+});
+//trở về đăng nhập
+btnBackLogin.addEventListener('click', (e) => {
+  modalLogin.classList.add('header-top-modal-show');
+  modalResetPassword.classList.remove('header-top-modal-show');
+});
+
+//chuyển hướng vào giỏ hàng &thanh toán
+let btnViewCart = document.querySelector('.box-view-cart');
+btnViewCart.addEventListener('click', (e) => {
+  window.location = 'http://localhost:5501/cart.html';
+});
+
+let btnViewCheckout = document.querySelector('.box-make-payment');
+btnViewCheckout.addEventListener('click', (e) => {
+  window.location = 'http://localhost:5501/checkout.html';
+});
+
+//validation form
+
+//validation form
