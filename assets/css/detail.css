@@ -84,8 +84,13 @@
   font-weight: 500;
   color: #050505;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 .content .size-active {
+  background-color: #050505;
+  color: #ffffff;
+}
+.content .size:hover {
   background-color: #050505;
   color: #ffffff;
 }
@@ -116,6 +121,10 @@
   color: rgb(0, 0, 0);
   font-weight: bold;
   font-size: 1.4rem;
+  transition: all 0.2s ease-in-out;
+}
+.button-amount:hover {
+  background-color: #beb0b0;
 }
 .button-minus {
   z-index: 2;

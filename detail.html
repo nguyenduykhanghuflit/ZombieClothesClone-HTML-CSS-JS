@@ -517,16 +517,16 @@
               <div class="col col-cus">
                 <div class="content">
                   <div class="detail-title">Tiedye ZOMBIE Hoodie</div>
-                  <div class="detail-price info-price total-money">420000₫</div>
+                  <div class="detail-price info-price total-money">420,000₫</div>
                   <div class="detail-size">
-                    <div class="size size-active">M</div>
+                    <div class="size">M</div>
                     <div class="size">L</div>
                     <div class="size">XL</div>
                   </div>
   
                   <div class="detail-amount">
                     <button class="button-amount button-minus">-</button>
-                    <input type="number" class="input-amout" value="1" />
+                    <input type="number" class="input-amout" readonly value="1" />
                     <button class="button-amount button-add">+</button>
                   </div>
   
@@ -788,9 +788,15 @@
       </div>
     </div>
 
-    <script src="./assets/scripts/detail.js"></script>
+   <script>
+     function clickme(smallImg) {
+  var fullImg = document.getElementById('imagebox');
+  fullImg.src = smallImg.src;
+}
+   </script>
     <script src="./assets/scripts/product.js"></script>
     <script src="./assets/scripts/index.js"></script>
+    <script src="./assets/scripts/cart.js"></script>
   </body>
 </html>
 
