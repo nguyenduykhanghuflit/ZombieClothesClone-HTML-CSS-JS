@@ -249,6 +249,9 @@ header-top-search-box .heading::after {
   margin: 20px auto;
   margin-bottom: 30px;
 }
+.form-control {
+  line-height: initial;
+}
 .modal-form-input {
   width: 100%;
   display: block;
@@ -266,7 +269,7 @@ header-top-search-box .heading::after {
 .modal-form-input::placeholder {
   font-weight: bolder;
 }
-.modal-form-input:first-child {
+.form-control:first-child {
   margin-bottom: 15px;
 }
 .header-top-modal .recapcha {
@@ -307,6 +310,15 @@ header-top-search-box .heading::after {
   color: #fc700b;
 }
 
+.form-control.err small {
+  color: #ff6d6d;
+  font-family: Helvetica;
+  padding: 5px 10px;
+  font-size: 1.2rem;
+
+  display: inline-block;
+}
+
 /* Cart CSS */
 
 .item-icon-cart .box-heading {
@@ -328,6 +340,24 @@ header-top-search-box .heading::after {
 }
 .item-icon-cart .header-top-cart-box {
   width: 550px;
+}
+.box-cart-empty {
+  padding: 20px 30px;
+  line-height: initial;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.box-cart-empty svg {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+.box-cart-empty > div {
+  text-align: center;
+  font-size: 1.3rem;
 }
 .box-item-cart {
   line-height: initial;
@@ -550,4 +580,10 @@ header-top-search-box .heading::after {
   font-weight: bolder;
   font-size: 1.3rem;
   padding: 0;
+}
+
+.modal__inner {
+  width: 400px;
+  height: 400px;
+  background-color: white;
 }

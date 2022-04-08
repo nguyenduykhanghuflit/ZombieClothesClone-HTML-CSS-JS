@@ -49,6 +49,28 @@ btnViewCheckout.addEventListener('click', (e) => {
   window.location = 'http://localhost:5501/checkout.html';
 });
 
-//validation form
+//validation form đăng nhập header
+import validation from './validation.js';
+const formLogin = document.querySelector('.form-login');
+const password = document.getElementById('password');
+const email = document.getElementById('email');
+formLogin.addEventListener('submit', function (e) {
+  e.preventDefault();
+  let checkEmpty = validation.checkRequired([email, password]);
+  let checkEmailInvalid = validation.checkEmail(email);
+  if (checkEmpty && checkEmailInvalid) alert('oke bro');
+});
 
-//validation form
+//validation form quên mật khẩu
+
+let register = document.getElementById('modal-register');
+let modal = document.querySelector('.modal');
+let modalOverplay = document.querySelector('.modal__overplay');
+register.addEventListener('click', (e) => {
+  removeAllClassShowModal(modals);
+  modal.style.display = 'flex';
+});
+
+modalOverplay.addEventListener('click', (e) => {
+  modal.style.display = 'none';
+});

@@ -3,6 +3,7 @@
   --black-color: #000;
   --text-color: #050505;
   --border-bot: #5c5c5c;
+  --button-color: #fc700b;
 }
 
 * {
@@ -109,6 +110,7 @@ html {
   left: 0;
   right: 0;
   display: none;
+  z-index: 9999999999999999999999;
 }
 .modal__overplay {
   position: absolute;
@@ -120,10 +122,7 @@ html {
 .modal__body {
   position: relative;
   z-index: 1;
-  width: 300px;
-  height: 300px;
   margin: auto;
-  background-color: yellow;
 }
 
 .breadcrumb {
