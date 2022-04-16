@@ -251,6 +251,7 @@ header-top-search-box .heading::after {
 }
 .form-control {
   line-height: initial;
+  height: 66px;
 }
 .modal-form-input {
   width: 100%;
@@ -270,7 +271,7 @@ header-top-search-box .heading::after {
   font-weight: bolder;
 }
 .form-control:first-child {
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
 }
 .header-top-modal .recapcha {
   margin-top: 10px;
@@ -284,7 +285,8 @@ header-top-search-box .heading::after {
   color: #2962ff;
 }
 
-.button-login {
+.button-login,
+.button-register {
   margin-top: 15px;
   cursor: pointer;
   width: 100%;
@@ -315,7 +317,6 @@ header-top-search-box .heading::after {
   font-family: Helvetica;
   padding: 5px 10px;
   font-size: 1.2rem;
-
   display: inline-block;
 }
 
@@ -583,7 +584,36 @@ header-top-search-box .heading::after {
 }
 
 .modal__inner {
-  width: 400px;
-  height: 400px;
+  /* display: none; */
+  width: 450px;
+  /* height: 400px; */
+  padding-bottom: 20px;
   background-color: white;
+}
+.form-register {
+  width: 90%;
+  height: 90%;
+  margin: 0 auto;
+}
+.heading-register-with {
+  font-size: 1.2rem;
+  font-weight: normal;
+  text-transform: none;
+  color: #677279;
+  text-align: center;
+  height: 10px;
+  line-height: 10px;
+}
+.register-box .heading {
+  line-height: initial;
+  padding-bottom: 10px;
+}
+.register {
+  margin-top: 20px;
+  width: 90%;
+  margin: 20px auto;
+  margin-bottom: 30px;
+}
+.register .form-control + .register .form-control {
+  margin-top: 10px;
 }

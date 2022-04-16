@@ -12,7 +12,7 @@ function showSuccess(input) {
   if (parent.classList.contains('err')) {
     parent.classList.remove('err');
     const small = parent.querySelector('small');
-    small.innerText = '';
+    small.innerText = ' ';
   }
 }
 
@@ -58,6 +58,18 @@ class Validation {
       check = true;
     } else {
       showError(input, 'Số điện thoại không hợp lệ');
+    }
+    return check;
+  }
+  checkPasswordMatches(inputPass1, inputPass2) {
+    let check = false;
+    let pass1 = inputPass1.value.trim();
+    let pass2 = inputPass2.value.trim();
+    if (pass1 == pass2) {
+      check = true;
+      showSuccess(inputPass2);
+    } else {
+      showError(inputPass2, 'Mật khẩu không khớp');
     }
     return check;
   }

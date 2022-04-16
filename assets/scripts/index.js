@@ -61,6 +61,34 @@ formLogin.addEventListener('submit', function (e) {
   if (checkEmpty && checkEmailInvalid) alert('oke bro');
 });
 
+//validation form đăng ký
+const formRegister = document.querySelector('.form-register');
+const fullname = document.getElementById('reg-fullname');
+const regEmail = document.getElementById('reg-email');
+const regPhone = document.getElementById('reg-phone');
+const regPassword = document.getElementById('reg-password');
+const enterPassword = document.getElementById('enter-password');
+
+formRegister.addEventListener('submit', function (e) {
+  e.preventDefault();
+  let checkEmpty = validation.checkRequired([
+    fullname,
+    regEmail,
+    regPhone,
+    regPassword,
+    enterPassword,
+  ]);
+  let checkEmailInvalid = validation.checkEmail(regEmail);
+  let checkPhone = validation.checkNumberPhone(regPhone);
+  let checkPasswordMatches = validation.checkPasswordMatches(
+    regPassword,
+    enterPassword
+  );
+  if (checkEmpty && checkEmailInvalid && checkPhone && checkPasswordMatches) {
+    alert('oke bro');
+  }
+});
+
 //validation form quên mật khẩu
 
 let register = document.getElementById('modal-register');
