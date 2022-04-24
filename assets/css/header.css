@@ -84,6 +84,7 @@
   top: -14px;
 }
 .header-top-modal .box-triangle {
+  cursor: pointer;
   position: absolute;
   bottom: calc(100% + 25px);
   margin: 0 auto;
@@ -262,6 +263,7 @@ header-top-search-box .heading::after {
   border-radius: 2px;
   color: #1e2d7d;
   font-family: Quicksand;
+  font-weight: bolder;
   font-size: 12px;
   padding: 0 10px;
   overflow: hidden;
@@ -270,9 +272,7 @@ header-top-search-box .heading::after {
 .modal-form-input::placeholder {
   font-weight: bolder;
 }
-.form-control:first-child {
-  /* margin-bottom: 15px; */
-}
+
 .header-top-modal .recapcha {
   margin-top: 10px;
   height: 42px;
@@ -616,4 +616,26 @@ header-top-search-box .heading::after {
 }
 .register .form-control + .register .form-control {
   margin-top: 10px;
+}
+
+.icon-close {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: blue; */
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  cursor: pointer;
+}
+.icon-close > i {
+  font-size: 20px;
+  display: inline-block;
+  text-align: center;
+  color: #050505;
+}
+.icon-close:hover > i {
+  color: #ff0000;
 }

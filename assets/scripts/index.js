@@ -22,6 +22,14 @@ listActions.forEach((item) => {
   });
 });
 
+let iconClick = document.querySelectorAll('.box-triangle');
+
+iconClick.forEach((i) => {
+  i.addEventListener('click', (e) => {
+    removeAllClassShowModal(modals);
+  });
+});
+
 const btnResetPassword = document.getElementById('modal-reset-password');
 const modalResetPassword = document.querySelector('.reset-password-box');
 const btnBackLogin = document.getElementById('modal-back-login');
@@ -89,7 +97,7 @@ formRegister.addEventListener('submit', function (e) {
   }
 });
 
-//validation form quên mật khẩu
+//ẩn hiện form register
 
 let register = document.getElementById('modal-register');
 let modal = document.querySelector('.modal');
@@ -101,4 +109,10 @@ register.addEventListener('click', (e) => {
 
 modalOverplay.addEventListener('click', (e) => {
   modal.style.display = 'none';
+});
+
+let iconCloseModalRegister = document.querySelector('.icon-close');
+
+iconCloseModalRegister.addEventListener('click', (e) => {
+  modalOverplay.click();
 });

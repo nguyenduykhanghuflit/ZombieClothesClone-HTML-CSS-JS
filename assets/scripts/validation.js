@@ -78,7 +78,7 @@ class Validation {
   checkAddress(selectArr) {
     let check = true;
     selectArr.forEach(function (select) {
-      if (select.value.trim() === 'invalid') {
+      if (select.value.trim() == 'none') {
         showError(select, `Bạn chưa chọn ${getPlaceholder(select)}`);
         check = false;
       } else {
