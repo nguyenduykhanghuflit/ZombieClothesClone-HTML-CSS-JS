@@ -52,8 +52,6 @@ const allMn = () => {
 for (let i = 0; i < prices.length; i++) {
   let money = removeComma(prices[i].textContent.trim());
   let amount = parseInt(amounts[i].value);
-
-  //Trước khi tăng giảm: tổng tiền 1 sản phẩm = giá tiền 1 sản phẩm (cart.html)
   if (moneyTotals[i]) {
     moneyTotals[i].textContent = prices[i].textContent;
     allMn();

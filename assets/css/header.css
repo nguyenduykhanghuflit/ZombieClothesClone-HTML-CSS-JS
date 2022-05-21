@@ -233,7 +233,8 @@ header-top-search-box .heading::after {
 .item-icon-user .header-top-modal {
   width: 350px;
 }
-.header-top-modal .heading-login-with {
+.header-top-modal .heading-login-with,
+.login-cus .heading-login-with {
   font-size: 1.2rem;
   font-weight: normal;
   text-transform: none;
@@ -242,7 +243,8 @@ header-top-search-box .heading::after {
   height: 10px;
   line-height: 10px;
 }
-.header-top-modal .heading {
+.header-top-modal .heading,
+.login-cus .heading {
   padding-bottom: 5px;
 }
 .header-top-modal .login-box {
@@ -250,6 +252,7 @@ header-top-search-box .heading::after {
   margin: 20px auto;
   margin-bottom: 30px;
 }
+
 .form-control {
   line-height: initial;
   height: 66px;
@@ -273,7 +276,8 @@ header-top-search-box .heading::after {
   font-weight: bolder;
 }
 
-.header-top-modal .recapcha {
+.header-top-modal .recapcha,
+.login-cus .recapcha {
   margin-top: 10px;
   height: 42px;
   line-height: initial;
@@ -638,4 +642,43 @@ header-top-search-box .heading::after {
 }
 .icon-close:hover > i {
   color: #ff0000;
+}
+
+/* modify logged */
+.item-icon-user .header-logged {
+  width: 200px;
+}
+
+.header-logged .heading-login-with {
+  width: 80%;
+  margin: 5px auto;
+  border-top: 1px #677279 solid;
+}
+
+.info-box {
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  line-height: initial;
+}
+.info-box p,
+.info-logout a {
+  font-size: 1.5rem;
+  color: #333;
+}
+.info-detail,
+.info-logout {
+  cursor: pointer;
+}
+
+.info-detail:hover,
+.info-logout:hover a {
+  color: #fc700b;
+}
+.info-name {
+  font-weight: bold;
+}
+
+.none-element {
+  display: none;
 }

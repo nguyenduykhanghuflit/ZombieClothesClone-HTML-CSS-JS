@@ -29,21 +29,37 @@ const getSize = () => {
 
 let price = document.querySelector('.total-money').textContent;
 
+//thêm vào giỏ hàng
 btnAddCart.addEventListener('click', (e) => {
   let size = getSize();
   if (size != null) {
     let img = document.querySelector('#imagebox').src;
     let totalMoney = document.querySelector('.total-money').textContent;
-    let title = document.querySelector('.detail-title').textContent;
+    let nameProduct = document.querySelector('.detail-title').textContent;
     let amount = document.querySelector('.input-amout').value;
-    let data = [{ title, price, totalMoney, size, img, amount }];
-    console.log(data);
-  } else console.log('bạn chưa chọn size');
+    let data = { nameProduct, price, totalMoney, size, img, amount };
+
+    let currentData = localStorage.getItem('cart');
+    currentData == null
+      ? localStorage.setItem('cart', JSON.stringify([data]))
+      : addData(data);
+  } else alert('bạn chưa chọn size');
 });
 
-//lấy giá trị từ localStorage với key=cart
-//let itemCart=value
-//itemCart.push(data);
-//push lại vào localStorage;
 
-//[{},{},{}]
+function addData(data) {
+  let currentData = JSON.parse(localStorage.getItem('cart'));
+  currentData.push(data);
+  localStorage.setItem('cart', JSON.stringify(currentData));
+}
+
+function show() {
+  let bb = JSON.parse(localStorage.getItem('cart'));
+  bb.forEach((item) => {
+    console.log('==========================');
+    console.log(item.nameProduct);
+    console.log(item.totalMoney);
+  });
+}
+
+show();

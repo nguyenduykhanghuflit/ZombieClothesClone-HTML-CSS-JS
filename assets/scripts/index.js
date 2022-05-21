@@ -22,14 +22,6 @@ listActions.forEach((item) => {
   });
 });
 
-let iconClick = document.querySelectorAll('.box-triangle');
-
-iconClick.forEach((i) => {
-  i.addEventListener('click', (e) => {
-    removeAllClassShowModal(modals);
-  });
-});
-
 const btnResetPassword = document.getElementById('modal-reset-password');
 const modalResetPassword = document.querySelector('.reset-password-box');
 const btnBackLogin = document.getElementById('modal-back-login');
@@ -49,12 +41,12 @@ btnBackLogin.addEventListener('click', (e) => {
 //chuyển hướng vào giỏ hàng &thanh toán
 let btnViewCart = document.querySelector('.box-view-cart');
 btnViewCart.addEventListener('click', (e) => {
-  window.location = 'http://localhost:5501/cart.html';
+  window.location = '/cart';
 });
 
 let btnViewCheckout = document.querySelector('.box-make-payment');
 btnViewCheckout.addEventListener('click', (e) => {
-  window.location = 'http://localhost:5501/checkout.html';
+  window.location = '/cart/checkout';
 });
 
 //validation form đăng nhập header
@@ -67,34 +59,6 @@ formLogin.addEventListener('submit', function (e) {
   let checkEmpty = validation.checkRequired([email, password]);
   let checkEmailInvalid = validation.checkEmail(email);
   if (checkEmpty && checkEmailInvalid) alert('oke bro');
-});
-
-//validation form đăng ký
-const formRegister = document.querySelector('.form-register');
-const fullname = document.getElementById('reg-fullname');
-const regEmail = document.getElementById('reg-email');
-const regPhone = document.getElementById('reg-phone');
-const regPassword = document.getElementById('reg-password');
-const enterPassword = document.getElementById('enter-password');
-
-formRegister.addEventListener('submit', function (e) {
-  e.preventDefault();
-  let checkEmpty = validation.checkRequired([
-    fullname,
-    regEmail,
-    regPhone,
-    regPassword,
-    enterPassword,
-  ]);
-  let checkEmailInvalid = validation.checkEmail(regEmail);
-  let checkPhone = validation.checkNumberPhone(regPhone);
-  let checkPasswordMatches = validation.checkPasswordMatches(
-    regPassword,
-    enterPassword
-  );
-  if (checkEmpty && checkEmailInvalid && checkPhone && checkPasswordMatches) {
-    alert('oke bro');
-  }
 });
 
 //ẩn hiện form register
@@ -113,6 +77,28 @@ modalOverplay.addEventListener('click', (e) => {
 
 let iconCloseModalRegister = document.querySelector('.icon-close');
 
-iconCloseModalRegister.addEventListener('click', (e) => {
-  modalOverplay.click();
+// iconCloseModalRegister.addEventListener('click', (e) => {
+//   modalOverplay.click();
+// });
+
+let iconClick = document.querySelectorAll('.box-triangle');
+
+iconClick.forEach((i) => {
+  i.addEventListener('click', (e) => {
+    removeAllClassShowModal(modals);
+  });
+});
+
+let ips = document.querySelector('.input-search-box');
+let btnS = document.querySelector('.btn-search');
+// ips.addEventListener('keypress', (e) => {
+//   if (e.keyCode == 13) btnS.click();
+// });
+
+btnS.addEventListener('click', (e) => {
+  let vl = ips.value.trim();
+  if (vl != '') {
+    let url = `/search/index?q=${vl}`;
+    window.location = url;
+  }
 });
